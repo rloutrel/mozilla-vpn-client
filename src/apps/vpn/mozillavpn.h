@@ -34,7 +34,6 @@ class ServerData;
 class ServerLatency;
 class StatusIcon;
 class SubscriptionData;
-class SupportCategoryModel;
 class Telemetry;
 class User;
 
@@ -121,10 +120,6 @@ class MozillaVPN final : public App {
   Q_INVOKABLE void update();
   Q_INVOKABLE void backendServiceRestore();
   Q_INVOKABLE void triggerHeartbeat();
-  Q_INVOKABLE void createSupportTicket(const QString& email,
-                                       const QString& subject,
-                                       const QString& issueText,
-                                       const QString& category);
   Q_INVOKABLE bool validateUserDNS(const QString& dns) const;
   Q_INVOKABLE void hardResetAndQuit();
   Q_INVOKABLE void requestDeleteAccount();
@@ -143,7 +138,6 @@ class MozillaVPN final : public App {
   ServerData* serverData() const;
   DeviceModel* deviceModel() const;
   IpAddressLookup* ipAddressLookup() const;
-  SupportCategoryModel* supportCategoryModel() const;
   Keys* keys() const;
   Location* location() const;
   NetworkWatcher* networkWatcher() const;
@@ -198,10 +192,6 @@ class MozillaVPN final : public App {
   void heartbeatCompleted(bool success);
 
   void addCurrentDeviceAndRefreshData(bool refreshProducts);
-
-  void createTicketAnswerRecieved(bool successful) {
-    emit ticketCreationAnswer(successful);
-  }
 
   void hardReset();
 
@@ -278,8 +268,6 @@ class MozillaVPN final : public App {
   void setGleanSourceTags(const QStringList& tags);
 
   void aboutToQuit();
-
-  void ticketCreationAnswer(bool successful);
 
  private:
   bool m_initialized = false;
