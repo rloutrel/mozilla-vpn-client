@@ -56,6 +56,12 @@ class App : public QObject {
   };
   Q_ENUM(State);
 
+  enum CustomScreen {
+    ScreenGetHelp,
+  };
+
+  Q_ENUM(CustomScreen);
+
   enum UserState {
     // The user is not authenticated and there is not a logging-out operation
     // in progress. Maybe we are running the authentication flow (to know if we

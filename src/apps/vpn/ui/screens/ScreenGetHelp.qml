@@ -61,7 +61,7 @@ Item {
             Layout.fillHeight: true
 
             Component.onCompleted: function() {
-                MZNavigator.addStackView(VPN.ScreenGetHelp, getHelpStackView)
+                MZNavigator.addStackView(MZApp.ScreenGetHelp, getHelpStackView)
                 getHelpStackView.push("qrc:/ui/screens/getHelp/ViewGetHelp.qml")
             }
 

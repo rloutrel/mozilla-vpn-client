@@ -16,5 +16,6 @@ target_sources(nebula PRIVATE
     ui/nebula_resources.qrc
     ui/compatQt6.qrc
     ui/resourcesQt6.qrc
+    ui/nebula_screens.qrc
     ui/utils.qrc
 )

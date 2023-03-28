@@ -239,7 +239,7 @@ Item {
             onClicked: {
                 MZGleanDeprecated.recordGleanEvent("getHelpClickedInitialize")
                 Glean.sample.getHelpClickedInitialize.record();
-                MZNavigator.requestScreen(VPN.ScreenGetHelp);
+                MZNavigator.requestScreen(MZApp.ScreenGetHelp);
             }
             anchors {
                 top: parent.top

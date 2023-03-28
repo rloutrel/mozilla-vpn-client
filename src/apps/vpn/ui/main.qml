@@ -260,7 +260,7 @@ Window {
             VPN.ScreenSettings,
             VPN.ScreenHome,
             VPN.ScreenMessaging,
-            VPN.ScreenGetHelp,
+            MZApp.ScreenGetHelp,
             VPN.ScreenTipsAndTricks
         ]
 

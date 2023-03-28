@@ -75,7 +75,7 @@ MZFlickable {
                 Layout.rightMargin: MZTheme.theme.windowMargin
                 labelText: MZI18n.GetHelpLinkTitle
                 horizontalPadding: MZTheme.theme.windowMargin / 2
-                onClicked: MZNavigator.requestScreen(VPN.ScreenGetHelp)
+                onClicked: MZNavigator.requestScreen(MZApp.ScreenGetHelp)
             }
         }
 

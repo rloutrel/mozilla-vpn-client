@@ -127,7 +127,7 @@ MZViewBase {
                 onClicked: {
                     MZGleanDeprecated.recordGleanEvent("getHelpClickedViewSettings");
                     Glean.sample.getHelpClickedViewSettings.record();
-                    MZNavigator.requestScreen(VPN.ScreenGetHelp);
+                    MZNavigator.requestScreen(MZApp.ScreenGetHelp);
                 }
             }
 

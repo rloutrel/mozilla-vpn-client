@@ -9,6 +9,7 @@
 #include <QWindow>
 
 #include "addons/manager/addonmanager.h"
+#include "app.h"
 #include "authenticationinapp/authenticationinapp.h"
 #include "env.h"
 #include "errorhandler.h"
@@ -85,6 +86,8 @@ QmlEngineHolder::QmlEngineHolder(QQmlEngine* engine) : m_engine(engine) {
                                Utils::instance());
   qmlRegisterSingletonInstance("Mozilla.Shared", 1, 0, "MZSupportCategoryModel",
                                SupportCategoryModel::instance());
+  qmlRegisterSingletonInstance("Mozilla.Shared", 1, 0, "MZApp",
+                               App::instance());
 
   Theme::instance()->initialize(engine);
   qmlRegisterSingletonInstance("Mozilla.Shared", 1, 0, "MZTheme",

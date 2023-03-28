@@ -1484,13 +1484,11 @@ void MozillaVPN::registerNavigatorScreens() {
       [](int*) -> int8_t { return 0; }, []() -> bool { return false; });
 
   Navigator::registerScreen(
-      MozillaVPN::ScreenGetHelp, Navigator::LoadPolicy::LoadTemporarily,
-      "qrc:/ui/screens/ScreenGetHelp.qml", QVector<int>{},
+      App::ScreenGetHelp, Navigator::LoadPolicy::LoadTemporarily,
+      "qrc:/nebula/screens/ScreenGetHelp.qml", QVector<int>{},
       [](int* requestedScreen) -> int8_t {
-        return (requestedScreen &&
-                *requestedScreen == MozillaVPN::ScreenGetHelp)
-                   ? 99
-                   : -1;
+        return (requestedScreen && *requestedScreen == App::ScreenGetHelp) ? 99
+                                                                           : -1;
       },
       []() -> bool {
         Navigator::instance()->requestPreviousScreen();

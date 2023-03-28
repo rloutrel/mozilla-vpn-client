@@ -74,7 +74,7 @@ MZViewBase {
 
                 labelText: MZI18n.GetHelpLinkTitle
                 Layout.alignment: Qt.AlignHCenter
-                onClicked: MZNavigator.requestScreen(VPN.ScreenGetHelp)
+                onClicked: MZNavigator.requestScreen(MZApp.ScreenGetHelp)
                 Layout.preferredHeight: MZTheme.theme.rowHeight
             }
 

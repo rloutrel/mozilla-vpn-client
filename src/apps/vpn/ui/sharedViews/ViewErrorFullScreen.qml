@@ -40,7 +40,7 @@ MZFlickable {
         visible: getHelpLinkVisible
 
         labelText: MZI18n.GetHelpLinkTitle
-        onClicked: MZNavigator.requestScreen(VPN.ScreenGetHelp)
+        onClicked: MZNavigator.requestScreen(MZApp.ScreenGetHelp)
     }
 
     ColumnLayout {

@@ -324,4 +324,8 @@ theme.blueBadge = {
     'backgroundColor': theme.blueBadgeBackground
 };
 
+
+theme.developerMenuQrc =
+    'qrc:/ui/screens/getHelp/developerMenu/ViewDeveloperMenu.qml';
+
 theme;
