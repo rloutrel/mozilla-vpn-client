@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/nebula">
-        <file>screens/qmldir</file>
         <file>screens/getHelp/ViewGetHelp.qml</file>
         <file>screens/getHelp/contactUs/ViewContactUsForm.qml</file>
         <file>screens/getHelp/contactUs/ViewContactUsThankYou.qml</file>
