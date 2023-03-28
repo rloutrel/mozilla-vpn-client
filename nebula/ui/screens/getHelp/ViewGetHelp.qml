@@ -7,11 +7,9 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.14
 
 import Mozilla.Shared 1.0
-import Mozilla.VPN 1.0
 import components 0.1
 
 MZViewBase {
-    id: vpnFlickable
     _menuTitle: MZI18n.GetHelpLinkTitle
     _menuOnBackClicked: () => MZNavigator.requestPreviousScreen()
     _viewContentData: Column {
@@ -48,7 +46,7 @@ MZViewBase {
             onClicked: {
                 MZGleanDeprecated.recordGleanEvent("helpContactSupportOpened");
                 Glean.sample.helpContactSupportOpened.record();
-                getHelpStackView.push("qrc:/ui/screens/getHelp/contactUs/ViewContactUsForm.qml");
+                getHelpStackView.push("qrc:/nebula/screens/getHelp/contactUs/ViewContactUsForm.qml");
             }
         }
 
@@ -76,11 +74,11 @@ MZViewBase {
             anchors.horizontalCenter: parent.horizontalCenter
 
             settingTitle: MZI18n.GetHelpDeveloperOptions
-            imageLeftSrc: "qrc:/ui/resources/developer.svg"
+            imageLeftSrc: "qrc:/nebula/resources/developer.svg"
             imageRightSrc: "qrc:/nebula/resources/chevron.svg"
             imageRightMirror: MZLocalizer.isRightToLeft
             visible: MZSettings.developerUnlock
-            onClicked: getHelpStackView.push("qrc:/ui/screens/getHelp/developerMenu/ViewDeveloperMenu.qml")
+            onClicked: getHelpStackView.push(MZTheme.theme.developerMenuQrc)
         }
 
     }

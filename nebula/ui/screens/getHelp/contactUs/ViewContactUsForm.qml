@@ -32,10 +32,9 @@ MZViewBase {
            target: MZUtils
            function onTicketCreationAnswer(successful) {
                if(successful) {
-                   getHelpStackView.replace("qrc:/ui/screens/getHelp/contactUs/ViewContactUsThankYou.qml", {_emailAddress: contactUsRoot._emailAddress}, StackView.Immediate);
+                   getHelpStackView.replace("qrc:/nebula/screens/getHelp/contactUs/ViewContactUsThankYou.qml", {_emailAddress: contactUsRoot._emailAddress}, StackView.Immediate);
                } else {
-                   // TODO: Navigator.GetTheThing
-                   getHelpStackView.replace("qrc:/ui/sharedViews/ViewErrorFullScreen.qml", {
+                   getHelpStackView.replace("qrc:/nebula/sharedViews/ViewErrorFullScreen.qml", {
                        headlineText: MZI18n.InAppSupportWorkflowSupportErrorHeader,
                        errorMessage: MZI18n.InAppSupportWorkflowSupportErrorText,
                        primaryButtonText: MZI18n.InAppSupportWorkflowSupportErrorButton,

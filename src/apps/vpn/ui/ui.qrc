@@ -17,9 +17,6 @@
         <file>screens/devices/VPNDevicesListHeader.qml</file>
         <file>screens/devices/VPNDeviceListItem.qml</file>
         <file>screens/devices/VPNRemoveDevicePopup.qml</file>
-        <file>screens/getHelp/ViewGetHelp.qml</file>
-        <file>screens/getHelp/contactUs/ViewContactUsForm.qml</file>
-        <file>screens/getHelp/contactUs/ViewContactUsThankYou.qml</file>
         <file>screens/getHelp/developerMenu/ViewAnimationsPlayground.qml</file>
         <file>screens/getHelp/developerMenu/ViewDeveloperMenu.qml</file>
         <file>screens/getHelp/developerMenu/ViewFeatureList.qml</file>
@@ -58,7 +55,6 @@
         <file>screens/ScreenCaptivePortal.qml</file>
         <file>screens/ScreenCrashReporting.qml</file>
         <file>screens/ScreenDeviceLimit.qml</file>
-        <file>screens/ScreenGetHelp.qml</file>
         <file>screens/ScreenHome.qml</file>
         <file>screens/ScreenInitialize.qml</file>
         <file>screens/ScreenMessaging.qml</file>
