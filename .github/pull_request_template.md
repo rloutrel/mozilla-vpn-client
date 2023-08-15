@@ -1,8 +1,14 @@
 ## Description
 
-    Describe your changes
-
-## Reference
+    Thank you for your contribution! To help us review your patch please describe:
+    
+    * The problem you are fixing or the feature you are implementing 
+    
+    * How you fixed the problem or implemented the feature
+    
+    * Optional: Ramifications, notes to reviewers, questions, etc. 
+    
+## Reference 
 
     i.e Jira or Github issue URL
 
