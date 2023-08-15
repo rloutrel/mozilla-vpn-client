@@ -1,12 +1,12 @@
 ## Description
 
-    Thank you for your contribution! To help us review your patch please describe:
+    Thank you for your contribution! To contextualize your changes and help us review the PR please describe:
     
     * The problem you are fixing or the feature you are implementing 
     
     * How you fixed the problem or implemented the feature
     
-    * Optional: Ramifications, notes to reviewers, questions, etc. 
+    * Optional: Ramifications, notes to reviewers, questions, etc.
     
 ## Reference 
 
