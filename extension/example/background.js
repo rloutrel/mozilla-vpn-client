@@ -4,8 +4,8 @@ port.onMessage.addListener((response) => {
   console.log('Received: ' + JSON.stringify(response));
 });
 
-setInterval(() => {
-  port.postMessage({t: 'servers'});
-  port.postMessage({t: 'status'});
-  port.postMessage({t: 'disabled_apps'});
-}, 1000);
+// setInterval(() => {
+//   port.postMessage({t: 'servers'});
+//   port.postMessage({t: 'status'});
+//   port.postMessage({t: 'disabled_apps'});
+// }, 1000);

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mozilla VPN: <span class="font-light">Extension Exploration</span></h1>
+    </header>
+    <main id="home">
+      <section>
+        <h2>Client</h2>
+        <div>
+          <p>Status:</p>
+          <span class="info" id="client-status"></span>
+        </div>
+        <div>
+          <p>Location:</p>
+          <span class="info" id="client-location"></span>
+        </div>
+      </section>
+      <section>
+        <h2>Firefox           
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </h2>
+        <!-- <div>
+          <p>Status: </p>
+          <span class="info" id="firefox-status"></span>
+        </div> -->
+        <div>
+          <p>Location:</p>
+          <span class="info" id="firefox-location"></span>
+        </div>
+        <div>
+          <button class="change-location" data-which-location="browser">Change location ></button>
+        </div>
+      </section>
+      <section>
+        <h2>This site
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </h2>
+        <div>
+          <p>Location:</p>
+          <span class="info" id="tab-location">Location</span>
+        </div>
+        <div>
+          <button class="change-location" data-which-location="tab">Change location ></button>
+        </div>
+      </section>
+      <section>
+        <h2>Verify tab/site location</h2>
+        <a href="https://www.mullvad.net">Mullvad</a>
+        <a href="https://www.mylocation.org">Check my location</a>
+      </section>
+    </main>
+      <div class="moz-vpn-server-list-panel" id="moz-vpn-server-list-panel">
+        <h3 class="title proxy-panel-title" id="vpn-server-list-title" data-i18n-message-id="chooseLocation"></h3>
+        <!-- <button class="btn-return arrow-left controller moz-vpn-return" id="moz-vpn-return"></button> -->
+        <ul id="moz-vpn-server-list" class="moz-vpn-server-list">
+          <template id="server-list-item">
+            <li class="server-list-item" data-country-code="">
+              <button class="flx-row server-city-list-visibility-btn controller">
+                <div class="toggle"></div>
+                <img class="server-country-flag" src="" alt="" />
+                <p class="server-country-name"></p>
+              </button>
+              <ul class="server-city-list"></ul>
+            </li>
+          </template>
+          <template id="server-city-list-items">
+            <li>
+              <label class="server-city-list-item" tabindex="0">
+                <input class="server-radio-btn"  type="radio" data-country-code="" data-city-name="" checked=""/>
+                <div class="server-radio-control"></div>
+                <span class="server-city-name"></span>
+              </label>
+            </li>
+          </template>
+        </ul>
+      </div>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

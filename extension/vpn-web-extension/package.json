@@ -1,0 +1,30 @@
+{
+  "name": "vpnmozilla.org",
+  "version": "1.0.0",
+  "description": "A fast, secure and easy to use VPN browser extension. Built by the makers of Mozilla VPN.",
+  "main": ".",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "web-ext build --filename mozilla-vpn-extension.xpi",
+    "lint": "eslint src",
+    "start":  "web-ext run --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla-mobile/mozilla-vpn-client.git"
+  },
+  "author": "Mozilla Developers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozilla-mobile/mozilla-vpn-client/issues"
+  },
+  "homepage": "https://github.com/mozilla-mobile/mozilla-vpn-client#readme",
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "eslint-plugin-mozilla": "^3.2.0",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "web-ext": "^7.8.0"
+  }
+}
