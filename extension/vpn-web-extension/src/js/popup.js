@@ -127,4 +127,4 @@ const ServerList = {
   },
 }
 
-ServerList.init();
+// ServerList.init();
