@@ -17,18 +17,12 @@
     "default_title": "__MSG_extensionName__",
     "default_popup": "src/popup/popup.html"
   },
-  "sidebar_action": {
-    "default_title": "My sidebar",
-    "default_panel": "src/popup/popup.html",
-    "default_icon": "src/assets/img/logo.svg"
-  },
-  
   "icons": {
     "48": "src/assets/img/logo.svg",
     "96": "src/assets/img/logo.svg"
   },
   "background": {
-    "scripts": ["src/background/background.js", "src/background/messageHandler.js"]
+    "page": "src/js/background/index.html"
   },
   "incognito": "spanning",
   "permissions": [

@@ -2,13 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script src="../js/utils.js" typ="module"></script>
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <header>
-      <h1>Mozilla VPN: <span class="font-light">Extension Exploration</span></h1>
+      <h1>Mozilla VPN: <span class="font-light">Debuganza</span></h1>
     </header>
     <main id="home">
+      
+      <!-- Firefox status / settings -->
+      <section>
+        <h2>Firefox           
+          <label class="switch">
+            <input id="firefox-connectivity" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </h2>
+      </section>
+
+      <!-- Site level settings -->
+      <section>
+        <div>
+          <img id="favicon">
+        <h2 id="origin-url"></h2>
+        </div>
+        <div class="flex-end">
+          <p>Remove from VPN</p>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        </div>
+        <div class="flex-end">
+          <p class="info" id="tab-location">Location</p>
+        </div>
+        <div class="flex-end">
+          <button class="change-location" data-which-location="tab">Set custom location ></button>
+        </div>
+      </section>
+
+      <!-- Client/Device level status / settings -->
       <section>
         <h2>Client</h2>
         <div>
@@ -20,49 +51,17 @@
           <span class="info" id="client-location"></span>
         </div>
       </section>
+
+      <!-- Quick links to verify proxy changes -->
       <section>
-        <h2>Firefox           
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
-        </h2>
-        <!-- <div>
-          <p>Status: </p>
-          <span class="info" id="firefox-status"></span>
-        </div> -->
-        <div>
-          <p>Location:</p>
-          <span class="info" id="firefox-location"></span>
-        </div>
-        <div>
-          <button class="change-location" data-which-location="browser">Change location ></button>
-        </div>
-      </section>
-      <section>
-        <h2>This site
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
-        </h2>
-        <div>
-          <p>Location:</p>
-          <span class="info" id="tab-location">Location</span>
-        </div>
-        <div>
-          <button class="change-location" data-which-location="tab">Change location ></button>
-        </div>
-      </section>
-      <section>
-        <h2>Verify tab/site location</h2>
         <a href="https://www.mullvad.net">Mullvad</a>
         <a href="https://www.mylocation.org">Check my location</a>
       </section>
     </main>
+
       <div class="moz-vpn-server-list-panel" id="moz-vpn-server-list-panel">
+        <button class="btn-return arrow-left controller moz-vpn-return" id="moz-vpn-return">X</button>
         <h3 class="title proxy-panel-title" id="vpn-server-list-title" data-i18n-message-id="chooseLocation"></h3>
-        <!-- <button class="btn-return arrow-left controller moz-vpn-return" id="moz-vpn-return"></button> -->
         <ul id="moz-vpn-server-list" class="moz-vpn-server-list">
           <template id="server-list-item">
             <li class="server-list-item" data-country-code="">
@@ -85,6 +84,8 @@
           </template>
         </ul>
       </div>
-    <script src="popup.js" type="module"></script>
+      <button id="remove-proxy-configs">Remove all custom proxies <span id="num-proxies"></span></button>
+    <script src="../js/proxyHandler.js" type="module"></script>
+    <script src="../js/popup.js" type="module"></script>
   </body>
 </html>

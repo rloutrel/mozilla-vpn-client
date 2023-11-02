@@ -3,6 +3,8 @@ html {
   --button-bg-focus-color-primary: blue;
   --panel-separator-color: #eee;
   --panel-bg-color: #ffffff;
+  --menu-bg-active-color: #cfcfd8;
+  --menu-bg-hover-color: #e0e0e6;
   --panelWidth: 300px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -22,6 +24,14 @@ a {
   font-size: 1rem;
 }
 
+button {
+  background: var(--panel-bg-color);
+  padding: .5rem 0;
+  margin: 0;
+  border: none;
+  font-weight: 300;
+}
+
 h1 {
   text-align: center;
 }
@@ -32,6 +42,15 @@ h2 {
   align-content: center;
   align-items: center;
   min-height: 24px;
+}
+
+#origin-url {
+  margin: auto auto auto .5rem;
+}
+
+#favicon {
+  block-size: 1.25rem;
+  margin: auto 0;
 }
 
 .font-light {
@@ -59,6 +78,10 @@ h2 {
   justify-content: space-between;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 p,
 a {
   margin-block-end: .5rem;
@@ -79,34 +102,11 @@ a {
 
 /* --------------- SERVER LIST -------------- */
 
-/* .moz-vpn-logo,
-.moz-vpn-logotype {
-  color: var(--text-color-primary);
-  background-image: var(--logoMozillaVpn);
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: left center;
-  font-family: var(--fontMetropolis);
-  font-size: 15px;
-  line-height: 24px;
-  padding-inline-start: 28px;
-  position: relative;
-  padding-inline-end: 32px;
-} */
-
 #moz-vpn-server-list-panel {
-  /* block-size: var(--panelSize);
-  max-block-size: var(--panelSize); */
-  /* min-block-size: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden; */
-
-  /* block-size: 451px;
-  overflow-y: scroll; */
   position: absolute;
   inset-block-start: 60px;
   inset-inline-start: 0;
-  /* inline-size: 100%; */
+  inset-inline-end: 0;
 }
 
 .proxy-panel-title {
@@ -123,9 +123,9 @@ a {
   padding: 0 !important;
   font-size: 15px;
   color: var(--grey50);
-  /* position: absolute;
+  position: absolute;
   inset-inline-start: 0;
-  inset-inline-end: 0; */
+  inset-inline-end: 0;
 }
 
 #moz-vpn-return {
@@ -213,6 +213,7 @@ a {
   transition: height 0.3s ease-in-out, opacity 0.3s ease, visibility 0.4s ease;
   list-style-type: none;
   visibility: hidden;
+  margin-inline-start: 4px;
 }
 
 .expanded .server-city-list {
@@ -308,3 +309,22 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 } 
+
+
+#remove-proxy-configs {
+  width: 100%;
+  text-align: center;
+  background-color: var(--panel-bg-color);
+  padding: 1.5rem;
+  transition: background-color .1s;
+}
+
+#remove-proxy-configs:hover {
+  background-color: var(--menu-bg-hover-color);
+  transition: background-color .1s;
+}
+
+#remove-proxy-configs:active {
+  background-color: var(--menu-bg-active-color);
+  transition: background-color .1s;
+}
