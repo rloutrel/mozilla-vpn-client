@@ -92,6 +92,8 @@ QUrl AuthenticationListener::createLoginVerifyUrl() {
   QUrl url(Constants::apiBaseUrl());
   url.setPath(
       QString("/api/v2/%1/login/verify").arg(Constants::AUTH_PROD_NAME));
+
+  logger.debug() << "URL";
   return url;
 }
 

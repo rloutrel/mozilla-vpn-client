@@ -93,8 +93,9 @@ MZFlickable {
         MZVerticalSpacer {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.minimumHeight: MZTheme.theme.vSpacing / 2
-            Layout.maximumHeight: MZTheme.theme.vSpacing * 2
+            Layout.minimumHeight: 1
+            // Layout.minimumHeight: MZTheme.theme.vSpacing / 2
+            // Layout.maximumHeight: MZTheme.theme.vSpacing * 2
         }
 
         ColumnLayout {

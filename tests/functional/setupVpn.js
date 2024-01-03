@@ -22,7 +22,7 @@ const vpnWS = require('./helperWS.js');
 
 const fxaServer = require('./servers/fxa.js');
 const guardian = require('./servers/guardian.js');
-const addonServer = require('./servers/addon.js');
+// const addonServer = require('./servers/addon.js');
 const networkBenchmark = require('./servers/networkBenchmark.js');
 const captivePortalServer = require('./servers/captivePortalServer.js');
 
@@ -74,13 +74,13 @@ exports.mochaHooks = {
 
     await guardian.start();
     await fxaServer.start(guardian.url);
-    await addonServer.start();
+    // await addonServer.start();
     await networkBenchmark.start();
     await captivePortalServer.start();
 
     process.env['MVPN_API_BASE_URL'] = guardian.url;
     process.env['MZ_FXA_API_BASE_URL'] = fxaServer.url;
-    process.env['MZ_ADDON_URL'] = `${addonServer.url}/01_empty_manifest/`;
+    // process.env['MZ_ADDON_URL'] = `${addonServer.url}/01_empty_manifest/`;
     process.env['MVPN_SKIP_ADDON_SIGNATURE'] = '1';
 
     process.env['MZ_BENCHMARK_DOWNLOAD_URL'] = networkBenchmark.url;
@@ -93,13 +93,13 @@ exports.mochaHooks = {
   async afterAll() {
     guardian.stop();
     fxaServer.stop();
-    addonServer.stop();
+    // addonServer.stop();
     networkBenchmark.stop();
     captivePortalServer.stop();
 
     guardian.throwExceptionsIfAny();
     fxaServer.throwExceptionsIfAny();
-    addonServer.throwExceptionsIfAny();
+    // addonServer.throwExceptionsIfAny();
     networkBenchmark.throwExceptionsIfAny();
     captivePortalServer.throwExceptionsIfAny();
   },
